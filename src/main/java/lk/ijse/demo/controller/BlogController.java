@@ -5,6 +5,8 @@ import lk.ijse.demo.repository.BlogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/blog")
 public class BlogController {
@@ -37,5 +39,10 @@ public class BlogController {
     @PostMapping("/savepost")
     public void savePost(@RequestBody Blog blog) {
         blogRepository.save(blog);
+    }
+
+    @GetMapping("/getallpost")
+    public List<Blog> getAllPost() {
+        return blogRepository.findAll();
     }
 }
