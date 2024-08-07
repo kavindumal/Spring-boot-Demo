@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
@@ -46,26 +47,27 @@
 
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Id</label>
-        <input type="number" class="form-control" id="exampleFormControlInput1">
+        <input type="number" class="form-control" id="postId">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Title</label>
-        <input type="text" class="form-control" id="exampleFormControlInput2">
+        <input type="text" class="form-control" id="postTitle">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Content</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" id="postContent" rows="3"></textarea>
     </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Category</label>
-        <input type="text" class="form-control" id="exampleFormControlInput4">
+        <input type="text" class="form-control" id="postCategory">
     </div>
-    <button type="button" class="btn btn-outline-primary">Save Post</button>
+    <button type="button" class="btn btn-outline-primary" id="savepost">Save Post</button>
     <button type="button" class="btn btn-outline-secondary">Update Post</button>
     <button type="button" class="btn btn-outline-danger">Delete Post</button>
     <button type="button" class="btn btn-outline-dark">Get All Post</button>
 </div>
 
-<script src="js/bootstrap.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/Main.js"></script>
 </body>
 </html>
