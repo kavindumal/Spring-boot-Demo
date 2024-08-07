@@ -41,6 +41,16 @@ public class BlogController {
         blogRepository.save(blog);
     }
 
+    @PutMapping("/updatepost")
+    public Blog updatePost(@RequestBody Blog blog) {
+        return blogRepository.save(blog);
+    }
+
+    @DeleteMapping("/deletepost/{id}")
+    public void deletePost(@PathVariable int id) {
+        blogRepository.deleteById(id);
+    }
+
     @GetMapping("/getallpost")
     public List<Blog> getAllPost() {
         return blogRepository.findAll();
