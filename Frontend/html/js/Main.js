@@ -98,31 +98,3 @@ $('#getAllPost').click(function () {
         }
     });
 });
-
-$('#getPost').click(function () {
-    let postId = $('#postId').val();
-    $.ajax({
-        url: 'http://localhost:8080/blog/data/' + postId,
-        method: 'Get',
-        contentType: 'application/json',
-        success: function (result) {
-            console.log(result);
-            let tableBody = $('#postTableBody');
-            tableBody.empty();
-            result.forEach(function (post) {
-                tableBody.append(`
-                    <tr>
-                        <th scope="row">${post.id}</th>
-                        <td>${post.title}</td>
-                        <td>${post.content}</td>
-                        <td>${post.category}</td>
-                    </tr>
-                `);
-            });
-        },
-        error: function (error) {
-            console.log(error);
-            alert("Try again");
-        }
-    });
-});
