@@ -44,7 +44,6 @@
     </div>
 </nav>
 <div class="contend w-25 border p-3">
-
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Id</label>
         <input type="number" class="form-control" id="postId">
@@ -63,9 +62,22 @@
     </div>
     <button type="button" class="btn btn-outline-primary" id="savepost">Save Post</button>
     <button type="button" class="btn btn-outline-secondary" id="updatepost">Update Post</button>
-    <button type="button" class="btn btn-outline-danger">Delete Post</button>
-    <button type="button" class="btn btn-outline-dark">Get All Post</button>
+    <button type="button" class="btn btn-outline-danger" id="deletepost">Delete Post</button>
+    <button type="button" class="btn btn-outline-dark" id="getAllPost">Get All Posts</button>
+    <button type="button" class="btn btn-outline-info" id="getPost">Get Post</button>
 </div>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+        <th scope="col">Category</th>
+    </tr>
+    </thead>
+    <tbody id="postTableBody">
+    </tbody>
+</table>
 
 <script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/Main.js"></script>
